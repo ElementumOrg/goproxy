@@ -4,7 +4,6 @@ import (
 	"bufio"
 	"bytes"
 	"context"
-	"crypto/tls"
 	"crypto/x509"
 	"encoding/base64"
 	"fmt"
@@ -12,7 +11,6 @@ import (
 	"io"
 	"io/ioutil"
 	"net"
-	"net/http"
 	"net/http/httptest"
 	"net/url"
 	"os"
@@ -22,8 +20,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/elazarl/goproxy"
-	goproxy_image "github.com/elazarl/goproxy/ext/image"
+	"github.com/ElementumOrg/goproxy"
+	goproxy_image "github.com/ElementumOrg/goproxy/ext/image"
+	tls "github.com/refraction-networking/utls"
+	http "github.com/saucesteals/fhttp"
 )
 
 var acceptAllCerts = &tls.Config{InsecureSkipVerify: true}

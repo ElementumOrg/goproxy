@@ -2,12 +2,10 @@ package goproxy
 
 import (
 	"bufio"
-	"crypto/tls"
 	"errors"
 	"io"
 	"io/ioutil"
 	"net"
-	"net/http"
 	"net/url"
 	"os"
 	"regexp"
@@ -15,6 +13,9 @@ import (
 	"strings"
 	"sync"
 	"sync/atomic"
+
+	tls "github.com/refraction-networking/utls"
+	http "github.com/saucesteals/fhttp"
 )
 
 type ConnectActionLiteral int

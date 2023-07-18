@@ -5,10 +5,11 @@ import (
 	"io"
 	"log"
 	"net"
-	"net/http"
 	"os"
 	"regexp"
 	"sync/atomic"
+
+	http "github.com/saucesteals/fhttp"
 )
 
 // The basic proxy type. Implements http.Handler.

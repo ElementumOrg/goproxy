@@ -1,9 +1,6 @@
 package main
 
 import (
-	"crypto/tls"
-	"github.com/elazarl/goproxy"
-	"github.com/gorilla/websocket"
 	"log"
 	"net/http"
 	"net/url"
@@ -11,6 +8,10 @@ import (
 	"os/signal"
 	"sync"
 	"time"
+
+	"github.com/ElementumOrg/goproxy"
+	"github.com/gorilla/websocket"
+	tls "github.com/refraction-networking/utls"
 )
 
 var upgrader = websocket.Upgrader{} // use default options

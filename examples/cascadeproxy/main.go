@@ -5,14 +5,13 @@ import (
 	"fmt"
 	"io/ioutil"
 	"log"
-	"net/http"
 	"net/url"
 	"strings"
 	"time"
 
-	"github.com/elazarl/goproxy/ext/auth"
-
-	"github.com/elazarl/goproxy"
+	"github.com/ElementumOrg/goproxy"
+	"github.com/ElementumOrg/goproxy/ext/auth"
+	http "github.com/saucesteals/fhttp"
 )
 
 const (

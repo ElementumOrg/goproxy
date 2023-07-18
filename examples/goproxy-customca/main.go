@@ -3,9 +3,9 @@ package main
 import (
 	"flag"
 	"log"
-	"net/http"
 
-	"github.com/elazarl/goproxy"
+	"github.com/ElementumOrg/goproxy"
+	http "github.com/saucesteals/fhttp"
 )
 
 func main() {

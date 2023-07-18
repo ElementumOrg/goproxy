@@ -11,7 +11,7 @@ Typical usage is
 
 	proxy := goproxy.NewProxyHttpServer()
 	proxy.OnRequest(..conditions..).Do(..requesthandler..)
-	proxy.OnRequest(..conditions..).DoFunc(..requesthandlerFunction..)
+	proxy.OnRequest(..condition..).DoFunc(..requesthandlerFunction..)
 	proxy.OnResponse(..conditions..).Do(..responesHandler..)
 	proxy.OnResponse(..conditions..).DoFunc(..responesHandlerFunction..)
 	http.ListenAndServe(":8080", proxy)
@@ -23,7 +23,7 @@ Adding a header to each request
 		return r, nil
 	})
 
-Note that the function is called before the proxy sends the request to the server
+# Note that the function is called before the proxy sends the request to the server
 
 For printing the content type of all incoming responses
 
@@ -95,6 +95,5 @@ Will warn if multiple versions of jquery are used in the same domain.
 6. https://github.com/elazarl/goproxy/blob/master/examples/goproxy-upside-down-ternet/
 
 Modifies image files in an HTTP response via goproxy's image extension found in ext/.
-
 */
 package goproxy

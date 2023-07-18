@@ -4,11 +4,12 @@ import (
 	"bytes"
 	"io/ioutil"
 	"log"
-	"net/http"
 	"net/http/httptest"
 	"net/url"
 	"strings"
 	"testing"
+
+	http "github.com/saucesteals/fhttp"
 )
 
 func equal(u, v []string) bool {

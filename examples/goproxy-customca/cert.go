@@ -1,10 +1,10 @@
 package main
 
 import (
-	"crypto/tls"
 	"crypto/x509"
 
-	"github.com/elazarl/goproxy"
+	"github.com/ElementumOrg/goproxy"
+	tls "github.com/refraction-networking/utls"
 )
 
 var caCert = []byte(`-----BEGIN CERTIFICATE-----

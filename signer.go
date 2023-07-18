@@ -6,7 +6,6 @@ import (
 	"crypto/elliptic"
 	"crypto/rsa"
 	"crypto/sha1"
-	"crypto/tls"
 	"crypto/x509"
 	"crypto/x509/pkix"
 	"fmt"
@@ -16,6 +15,8 @@ import (
 	"runtime"
 	"sort"
 	"time"
+
+	tls "github.com/refraction-networking/utls"
 )
 
 func hashSorted(lst []string) []byte {

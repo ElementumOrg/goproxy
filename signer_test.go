@@ -1,16 +1,17 @@
 package goproxy
 
 import (
-	"crypto/tls"
 	"crypto/x509"
 	"io/ioutil"
-	"net/http"
 	"net/http/httptest"
 	"os"
 	"os/exec"
 	"strings"
 	"testing"
 	"time"
+
+	tls "github.com/refraction-networking/utls"
+	http "github.com/saucesteals/fhttp"
 )
 
 func orFatal(msg string, err error, t *testing.T) {

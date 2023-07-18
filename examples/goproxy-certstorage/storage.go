@@ -1,8 +1,9 @@
 package main
 
 import (
-	"crypto/tls"
 	"sync"
+
+	tls "github.com/refraction-networking/utls"
 )
 
 type CertStorage struct {

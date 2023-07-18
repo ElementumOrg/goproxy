@@ -7,7 +7,6 @@ import (
 	"io"
 	"log"
 	"net"
-	"net/http"
 	"net/http/httputil"
 	"os"
 	"os/signal"
@@ -15,8 +14,9 @@ import (
 	"sync"
 	"time"
 
-	"github.com/elazarl/goproxy"
-	"github.com/elazarl/goproxy/transport"
+	"github.com/ElementumOrg/goproxy"
+	"github.com/ElementumOrg/goproxy/transport"
+	http "github.com/saucesteals/fhttp"
 )
 
 type FileStream struct {
