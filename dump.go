@@ -5,7 +5,6 @@ import (
 	"errors"
 	"fmt"
 	"io"
-	"net/http/internal"
 	"strings"
 
 	http "github.com/saucesteals/fhttp"
@@ -155,5 +154,5 @@ func valueOrDefault(value, def string) string {
 }
 
 func NewChunkedWriter(w io.Writer) io.WriteCloser {
-	return internal.NewChunkedWriter(w)
+	return &chunkedWriter{w}
 }
